@@ -34,6 +34,8 @@ class Module
                 $di->set('view', function() {
                         $view = new \Phalcon\Mvc\View();
                         $view->setViewsDir(__DIR__ . '/views/');
+                        //共享布局
+                        $view->setLayoutsDir('../../home/views/layouts/');
                         $view->registerEngines(array(
 							".html" => 'volt'
 						));
