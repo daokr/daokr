@@ -1,0 +1,50 @@
+<?php echo $this->getContent(); ?>
+<div class="page-header">
+    <h2>会员注册</h2>
+</div>
+
+<?php echo $this->tag->form(array('home/session/register', 'id' => 'registerForm', 'class' => 'form-horizontal', 'onbeforesubmit' => 'return false')); ?>
+    <fieldset>
+
+
+        <div class="control-group">
+            <label class="control-label" for="email">Email</label>
+            <div class="controls">
+                <?php echo $this->tag->textField(array('email', 'class' => 'input-xlarge')); ?>
+                <div class="alert" id="email_alert">
+                    <strong>Warning!</strong> Please enter your email
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="password">密码</label>
+            <div class="controls">
+                <?php echo $this->tag->passwordField(array('password', 'class' => 'input-xlarge')); ?>
+                <div class="alert" id="password_alert">
+                    <strong>Warning!</strong> Please provide a valid password
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="repeatPassword">重复密码</label>
+            <div class="controls">
+                <?php echo $this->tag->passwordField(array('repeatPassword', 'class' => 'input-xlarge')); ?>
+                <div class="alert" id="repeatPassword_alert">
+                    <strong>Warning!</strong> The password does not match
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="username">用户名</label>
+            <div class="controls">
+                <?php echo $this->tag->textField(array('username', 'class' => 'input-xlarge')); ?>
+                <div class="alert" id="username_alert">
+                    <strong>Warning!</strong> Please enter your desired user name
+                </div>
+            </div>
+        </div>        
+        <div class="form-actions">
+            <?php echo $this->tag->submitButton(array('马上注册', 'class' => 'btn btn-primary btn-large', 'onclick' => 'return SignUp.validate();')); ?>
+        </div>
+    </fieldset>
+</form>

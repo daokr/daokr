@@ -1,0 +1,17 @@
+<?php echo $this->getContent(); ?>
+
+
+<table class="table table-bordered table-striped" align="center">
+<?php foreach ($page->items as $companydd) { ?>
+    <tbody>
+        <tr>
+            <td><?php echo $companydd->id; ?></td>
+            <td><?php echo $companydd->name; ?></td>
+            <td><?php echo $companydd->telephone; ?></td>
+            <td><?php echo $companydd->address; ?></td>
+            <td><?php echo $companydd->city; ?></td>
+        </tr>
+    </tbody>
+<?php } ?>
+</table>
+<?php echo $this->tag->linkTo(array('home/user/show/123', 'users')); ?>

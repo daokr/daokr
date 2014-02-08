@@ -1,0 +1,17 @@
+{{ content() }}
+
+
+<table class="table table-bordered table-striped" align="center">
+{% for companydd in page.items %}
+    <tbody>
+        <tr>
+            <td>{{ companydd.id }}</td>
+            <td>{{ companydd.name }}</td>
+            <td>{{ companydd.telephone }}</td>
+            <td>{{ companydd.address }}</td>
+            <td>{{ companydd.city }}</td>
+        </tr>
+    </tbody>
+{% endfor %}
+</table>
+{{ link_to('home/user/show/123','users')}}

@@ -1,0 +1,30 @@
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">Calliance</a>
+            <div class="nav-collapse">
+            <?php echo $this->elements->getMenu(); ?>
+            <ul class="nav pull-right">
+           		 <li><?php echo $this->tag->linkTo(array('home/session/login', '登录')); ?></li>
+           		 <li><?php echo $this->tag->linkTo(array('home/session/register', '注册')); ?></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <?php echo $this->getContent(); ?>
+</div>
+
+<footer>
+<div id="footer" align="center" class="container-fluid">
+	<span class='version'>Powered by Phalcon <?php echo Phalcon\Version::get(); ?></span>
+</div>
+</footer>
