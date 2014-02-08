@@ -1,5 +1,0 @@
-<footer>
-<div id="footer" align="center" class="container-fluid">
-	<span class='version'>Powered by Phalcon <?php echo Phalcon\Version::get(); ?></span>
-</div>
-</footer>

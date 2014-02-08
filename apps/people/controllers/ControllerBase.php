@@ -1,5 +1,5 @@
 <?php
-namespace IKPHP\People\Controllers;
+
 use Phalcon\Mvc\Controller;
 
 class ControllerBase extends Controller
